@@ -193,7 +193,6 @@ export const projects = [
     github: "https://github.com/rishavchanda/Quiz-Earn",
     webapp: "https://github.com/rishavchanda/Quiz-Earn",
   },
-  ,
 ];
 
 
