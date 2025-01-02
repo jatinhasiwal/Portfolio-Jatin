@@ -35,6 +35,7 @@ const Navbar = ({ darkMode, setDarkMode }) => {
               marginBottom: '20px',
               cursor: 'pointer',
             }}
+            href="#home" // Add a valid href for accessibility
           >
             <DiCssdeck size="3rem" /> <Span>Jatin Hasiwal</Span>
           </a>
@@ -49,7 +50,7 @@ const Navbar = ({ darkMode, setDarkMode }) => {
           <NavLink href="#education">Education</NavLink>
         </NavItems>
         <ButtonContainer>
-          <GitHubButton href={Bio.github} target="_blank">Github Profile</GitHubButton>
+          <GitHubButton href={Bio.github} target="_blank" rel="noopener noreferrer">Github Profile</GitHubButton>
           <button
             style={{
               background: 'none',
@@ -59,24 +60,17 @@ const Navbar = ({ darkMode, setDarkMode }) => {
               marginLeft: '20px',
             }}
             onClick={() => setDarkMode((prevMode) => !prevMode)}
+            aria-label="Toggle dark mode"
           >
-            {darkMode ? <BsSunFill size={20} style= {{color: 'white'}}/> : <BsMoonFill size={20} />}
+            {darkMode ? <BsSunFill size={20} style={{ color: 'white' }} /> : <BsMoonFill size={20} />}
           </button>
         </ButtonContainer>
         {isOpen && (
           <MobileMenu isOpen={isOpen} >
-            <MobileLink href="#about" onClick={() => setIsOpen(!isOpen)}>
-              About
-            </MobileLink>
-            <MobileLink href="#skills" onClick={() => setIsOpen(!isOpen)}>
-              Skills
-            </MobileLink>
-            <MobileLink href="#projects" onClick={() => setIsOpen(!isOpen)}>
-              Projects
-            </MobileLink>
-            <MobileLink href="#education" onClick={() => setIsOpen(!isOpen)}>
-              Education
-            </MobileLink>
+            <MobileLink href="#about" onClick={() => setIsOpen(!isOpen)}>About</MobileLink>
+            <MobileLink href="#skills" onClick={() => setIsOpen(!isOpen)}>Skills</MobileLink>
+            <MobileLink href="#projects" onClick={() => setIsOpen(!isOpen)}>Projects</MobileLink>
+            <MobileLink href="#education" onClick={() => setIsOpen(!isOpen)}>Education</MobileLink>
             <GitHubButton
               style={{
                 padding: '10px 16px',
@@ -86,6 +80,7 @@ const Navbar = ({ darkMode, setDarkMode }) => {
               }}
               href={Bio.github}
               target="_blank"
+              rel="noopener noreferrer"
             >
               Github Profile
             </GitHubButton>
