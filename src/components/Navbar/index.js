@@ -26,7 +26,7 @@ const Navbar = ({ darkMode, setDarkMode }) => {
   return (
     <Nav>
       <NavbarContainer>
-        <NavLogo to='/'>
+        <NavLogo>
           <a
             style={{
               display: "flex",
