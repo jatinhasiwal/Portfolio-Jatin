@@ -180,7 +180,6 @@ export const projects = [
     github: "https://github.com/rishavchanda/Todo-Web-App",
     webapp: "https://rishav-react-todo.netlify.app/",
   },
-  ,
   {
     id: 7,
     title: "Quiz App",
